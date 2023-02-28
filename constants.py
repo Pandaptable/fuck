@@ -8,6 +8,17 @@ def true(x):
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>fuck {x}</title>
+<script type='text/javascript'>\
+  title = "fuck {x} ";
+  position = 0;
+  function scrolltitle() {{
+    document.title = title.substring(position, title.length) + title.substring(0, position);
+    position++;
+    if (position > title.length) position = 0;
+    titleScroll = window.setTimeout(scrolltitle,200);
+  }}
+  scrolltitle();
+</script>
 </head>
 <style>
   *{{
